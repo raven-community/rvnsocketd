@@ -1,7 +1,7 @@
 // Input: ZMQ
 const zmq = require("zeromq")
 const mingo = require("mingo")
-const rvndb-code = require("rvndb-code")
+const rvndb_code = require("rvndb-code")
 const jq = require("bigjq")
 const defaults = { host: "127.0.0.1", port: 28769 }
 const init = function(config) {
@@ -20,12 +20,12 @@ const init = function(config) {
         let tx = JSON.parse(o)
         Object.keys(connections.pool).forEach(async function(key) {
           let connection = connections.pool[key]
-          const encoded = rvndb-code.encode(connection.query)
+          const encoded = rvndb_code.encode(connection.query)
           const types = encoded.q.db
           if (!types || types.indexOf("u") >= 0) {
             let filter = new mingo.Query(encoded.q.find)
             if (filter.test(tx)) {
-              let decoded = rvndb-code.decode(tx)
+              let decoded = rvndb_code.decode(tx)
               let result
               try {
                 if (encoded.r && encoded.r.f) {
@@ -46,7 +46,7 @@ const init = function(config) {
         let block = JSON.parse(o)
         Object.keys(connections.pool).forEach(async function(key) {
           let connection = connections.pool[key]
-          const encoded = rvndb-code.encode(connection.query)
+          const encoded = rvndb_code.encode(connection.query)
           const types = encoded.q.db
           if (!types || types.indexOf("c") >= 0) {
             let filter = new mingo.Query(encoded.q.find)
@@ -56,7 +56,7 @@ const init = function(config) {
             let transformed = []
             for(let i=0; i<filtered.length; i++) {
               let tx = filtered[i]
-              let decoded = rvndb-code.decode(tx)
+              let decoded = rvndb_code.decode(tx)
               let result
               try {
                 if (encoded.r && encoded.r.f) {
