@@ -1,0 +1,24 @@
+{
+  "name": "rvnsocketd",
+  "version": "1.0.0",
+  "description": "The message bus for ravencoin",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint *.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "rvndb-code": "1.0.0",
+    "bigjq": "0.0.7",
+    "ravencore-lib": "^1.0.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "ip": "^1.1.5",
+    "mingo": "^2.2.4",
+    "zeromq": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0"
+  }
+}
