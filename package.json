@@ -6,12 +6,16 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint *.js"
   },
-  "author": "",
+  "author": "MSFTserver",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raven-community/rvnsocketd.git"
+  },
   "dependencies": {
-    "rvndb-code": "github:raven-community/rvndb-code#master",
-    "bigjq": "github:raven-community/bigjq#master",
-    "ravencore-lib": "^1.0.3",
+    "rvndb-code": "^1.0.0",
+    "bigjq": "github:raven-community/bigjq/tree/1.0.0",
+    "ravencore-lib": "github:raven-community/ravencore-lib/tree/1.0.0",
     "cors": "^2.8.4",
     "express": "^4.16.4",
     "ip": "^1.1.5",
