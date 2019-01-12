@@ -1,6 +1,6 @@
 {
   "name": "rvnsocketd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The message bus for ravencoin",
   "main": "index.js",
   "scripts": {
@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "rvndb-code": "^1.0.0",
-    "bigjq": "github:raven-community/bigjq/tree/1.0.0",
-    "ravencore-lib": "github:raven-community/ravencore-lib/tree/1.0.0",
+    "bigjq": "github:raven-community/bigjq#master",
+    "ravencore-lib": "github:raven-community/ravencore-lib#master",
     "cors": "^2.8.4",
     "express": "^4.16.4",
     "ip": "^1.1.5",
